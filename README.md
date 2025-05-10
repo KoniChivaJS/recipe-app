@@ -11,14 +11,13 @@ This project is a full-stack application that allows users to browse and view re
 - TypeScript
 - Axios
 - TailWind
-- CSS Modules
 
 ### Backend (BE)
 
 - Node.js
 - Express.js
 - TypeScript
-- Axios (for calling external Recipe API)
+- Axios 
 
 ## Folder Structure
 
@@ -65,8 +64,6 @@ Create a `.env` file in the `backend/` folder and add:
 PORT=5000
 RECIPE_API_BASE_URL=https://www.themealdb.com/api/json/v1/1
 ```
-
-> **Note:** You can add additional API keys or config if required.
 
 ---
 
@@ -123,7 +120,6 @@ App will be available at `http://localhost:3000`.
 
 ```bash
 npm run lint
-npm run format
 ```
 
 ---
@@ -142,12 +138,9 @@ npm run format
 
 ```json
 "scripts": {
-  "dev": "nodemon src/index.ts",
-  "build": "tsc",
-  "start": "node dist/index.js",
-  "lint": "eslint .",
-  "format": "prettier --write ."
-}
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+},
 ```
 
 #### Frontend `package.json`
@@ -157,7 +150,6 @@ npm run format
   "dev": "next dev",
   "build": "next build",
   "start": "next start",
-  "lint": "next lint",
-  "format": "prettier --write ."
+  "lint": "next lint"
 }
 ```
